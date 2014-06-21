@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <groupId>com.github.wuic</groupId>
-        <artifactId>web-ui-compressor</artifactId>
-        <version>0.5.0-SNAPSHOT</version>
-    </parent>
-
     <groupId>com.github.wuic.samples</groupId>
     <artifactId>wuic-samples</artifactId>
-    <packaging>pom</packaging>
     <version>0.5.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+    <name>wuic-samples</name>
+    <url>http://wuic.github.io</url>
 
     <modules>
         <module>bootstrap3-sample</module>
@@ -23,8 +19,50 @@
         <module>thymeleaf-sample</module>
     </modules>
 
+    <!-- Engines dependencies need to be explicitly imported by the user -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.googlecode.htmlcompressor</groupId>
+                <artifactId>htmlcompressor</artifactId>
+                <version>${htmlcompressor.version}</version>
+            </dependency>
+
+            <!-- For engine and samples using YUICompressor -->
+            <dependency>
+                <groupId>com.yahoo.platform.yui</groupId>
+                <artifactId>yuicompressor</artifactId>
+                <version>${yuicompressor.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>rhino</groupId>
+                        <artifactId>js</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- For engine and samples using EHCache -->
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>${ehcache-core.version}</version>
+            </dependency>
+
+            <!-- J2EE APIs are always provided -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.github.wuic</groupId>
                 <artifactId>wuic-servlet</artifactId>
@@ -82,4 +120,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java-source.version>1.6</java-source.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <jetty8-version>8.1.9.v20130131</jetty8-version>
+        <jsp-api.version>2.2</jsp-api.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <htmlcompressor.version>1.5.2</htmlcompressor.version>
+        <yuicompressor.version>2.3.6</yuicompressor.version>
+        <ehcache-core.version>2.5.3</ehcache-core.version>
+    </properties>
 </project>
