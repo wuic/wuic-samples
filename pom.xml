@@ -5,10 +5,6 @@
     <artifactId>wuic-samples</artifactId>
     <version>0.5.0-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
-    <name>wuic-samples</name>
-    <url>http://wuic.github.io</url>
-
     <modules>
         <module>bootstrap3-sample</module>
         <module>js-css-sample</module>
@@ -18,6 +14,60 @@
         <module>build-time-sample</module>
         <module>thymeleaf-sample</module>
     </modules>
+
+    <packaging>pom</packaging>
+    <name>Web UI Compressor samples</name>
+    <url>http://wuic.github.io</url>
+    <description>
+        Samples for the Web UI Compressor project
+    </description>
+    <inceptionYear>2012</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>WUIC license</name>
+            <url>https://github.com/wuic/wuic/blob/master/LICENSE.md</url>
+            <distribution>repo</distribution>
+            <comments>MIT, Apache 2.0</comments>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/wuic/wuic-samples.git</connection>
+        <developerConnection>scm:git:git@github.com:wuic/wuic-samples.git</developerConnection>
+        <url>http://github.com/wuic/wuic-samples</url>
+    </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/wuic/wuic-samples/issues</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <id>gdrouet</id>
+            <name>Guillaume DROUET</name>
+            <organization>Capgemini</organization>
+            <email>guidrouet@gmail.com</email>
+            <roles>
+                <role>Build engineer</role>
+                <role>Java Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name>Corentin AZELART</name>
+            <organization>Capgemini</organization>
+            <email>corentin.azelart@gmail.com</email>
+            <roles>
+                <role>Java Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </contributor>
+    </contributors>
 
     <!-- Engines dependencies need to be explicitly imported by the user -->
     <dependencyManagement>
