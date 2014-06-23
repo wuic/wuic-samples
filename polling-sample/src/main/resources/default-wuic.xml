@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<wuic polling-interleave-seconds="10">
+<wuic polling-interval-seconds="10">
     <nut-dao-builders>
         <nut-dao-builder id="diskNutDao" type="DiskNutDaoBuilder">
             <properties>
                 <property key="c.g.wuic.dao.basePathAsSystemProperty">true</property>
                 <property key="c.g.wuic.dao.basePath">wuic.dir</property>
-                <property key="c.g.wuic.dao.pollingInterleave">10</property>
+                <property key="c.g.wuic.dao.pollingInterval">10</property>
             </properties>
         </nut-dao-builder>
 
