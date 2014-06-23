@@ -116,6 +116,12 @@
                 <artifactId>wuic-yuicompressor</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.wuic.extensions</groupId>
+                <artifactId>wuic-thymeleaf</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
