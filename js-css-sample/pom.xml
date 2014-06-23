@@ -22,18 +22,14 @@
             <artifactId>wuic-servlet</artifactId>
         </dependency>
 
-        <!-- JS & CSS compression -->
         <dependency>
-            <groupId>com.yahoo.platform.yui</groupId>
-            <artifactId>yuicompressor</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.github.wuic.extensions</groupId>
+            <artifactId>wuic-ehcache</artifactId>
         </dependency>
 
-        <!-- Caching -->
         <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache-core</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.github.wuic.extensions</groupId>
+            <artifactId>wuic-yuicompressor</artifactId>
         </dependency>
     </dependencies>
 
