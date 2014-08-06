@@ -7,24 +7,35 @@ into the desired sample module and just run :
 ```
 
 Some samples are currently available on the 'SNAPSHOT' branche. However, you can use them until they will be released.
+All samples apply optimizations provided by core module:
+- Aggregation
+- Client-side caching
+- Server-side caching
+- Servlet serving process results
+- Rewrite CSS URL
+- Rewrite Sourcemap URL
 
 <table width=100% height=100%>
     <tr>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Features demonstrated</td>
+        <td><b>Name</b></td>
+        <td><b>Description</b></td>
+        <td><b>Additional feature(s)</b></td>
     </tr>
-        <td>bootstrap3-sample</td>
-        <td>
+        <td rowspan="3">bootstrap3-sample</td>
+        <td rowspan="3">
             This sample embeds the bootstrap3 samples and applies the Servlet filter provided by WUIC.
         </td>
         <td>
-             YuiCompressor Javascript & CSS minification support. Script aggregation. Servlet filter.
+             YuiCompressor Javascript & CSS minification
         </td>
+    <tr>
+         <td>HTML filter</td>
+    </tr>
+         <td>Server-side caching with EhCache</td>
     </tr>
     <tr>
-        <td>js-css-sample</td>
-        <td>
+        <td rowspan="3">js-css-sample</td>
+        <td rowspan="3">
             The webapp embeds the <a href="http://jqueryui.com/resources/download/jquery-ui-1.10.2.zip">JQuery UI</a> archive.
             All the demos have been copied into the '/using-wuic' path to show how to integrate them with WUIC.
             This way, you can see how you can embed uncompressed framework resources and configure a 'production' mode
@@ -37,29 +48,54 @@ Some samples are currently available on the 'SNAPSHOT' branche. However, you can
             You can also see how the servlet filter works under the path '/jquery-ui-1.10.2/filter'.
         </td>
         <td>
-             YuiCompressor Javascript & CSS minification support. EhCache support. Script aggregation. Servlet filter.
+             YuiCompressor Javascript & CSS minification
         </td>
+    <tr>
+        <td>HTML filter</td>
     </tr>
     <tr>
-        <td>js-sprite-sample</td>
-        <td>
+        <td>Server-side caching with EhCache</td>
+    </tr>
+    <tr>
+        <td rowspan="5">js-sprite-sample</td>
+        <td rowspan="5">
             The sample includes the <a href="http://gwennaelbuchet.github.io/cgSceneGraph/">cgSceneGraph</a> framework.
             It demonstrates how to include a set of images aggregated and loaded with sprite in Javascript. The demo
             just displays the different images using sprites.
         </td>
-        <td>
-             YuiCompressor Javascript minification support. EhCache support. JS sprites. Image aggregation. Script aggregation.
-        </td>
+        <td>YuiCompressor Javascript & CSS minification</td>
     </tr>
     <tr>
-        <td>css-sprite-sample</td>
-        <td>
+        <td>HTML filter</td>
+    </tr>
+    <tr>
+        <td>Server-side caching with EhCache</td>
+    </tr>
+    <tr>
+        <td>Image aggregation with javascript sprite generation</td>
+    </tr>
+    <tr>
+        <td>JSP tag</td>
+    </tr>
+    <tr>
+        <td rowspan="5">css-sprite-sample</td>
+        <td rowspan="5">
             Demonstrates how to include a set of images aggregated and loaded with sprite in CSS. The demo
             just displays a set of different flags loaded from a single image .
         </td>
-        <td>
-             Cache. CSS sprites. Image aggregation.
-        </td>
+        <td>YuiCompressor Javascript & CSS minification</td>
+    </tr>
+    <tr>
+        <td>HTML filter</td>
+    </tr>
+    <tr>
+        <td>Server-side caching with EhCache</td>
+    </tr>
+    <tr>
+        <td>Image aggregation with CSS sprite generation</td>
+    </tr>
+    <tr>
+        <td>JSP tag</td>
     </tr>
     <tr>
         <td>thymeleaf-sample</td>
@@ -68,17 +104,20 @@ Some samples are currently available on the 'SNAPSHOT' branche. However, you can
             can use the thymeleaf dialect and its import processor.
         </td>
         <td>
-             Thymeleaf support. Memory Cache. Script aggregation.
+             Thymeleaf support
         </td>
     </tr>
     <tr>
-        <td>polling-sample</td>
-        <td>
+        <td rowspan="3">polling-sample</td>
+        <td rowspan="3">
             Demonstrates how WUIC can poll both configuration files and nuts and refresh them at runtime.
         </td>
-        <td>
-             Memory Cache. Configuration polling. Nut polling.
-        </td>
+        <td>YuiCompressor Javascript & CSS minification</td>
+    </tr>
+    <tr>
+        <td>Configuration polling</td>
+    </tr>
+        <td>Nut polling</td>
     </tr>
     <tr>
         <td>build-time-sample</td>

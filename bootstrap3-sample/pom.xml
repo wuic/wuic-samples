@@ -25,11 +25,6 @@
             <groupId>com.github.wuic.extensions</groupId>
             <artifactId>wuic-ehcache</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.github.wuic.extensions</groupId>
-            <artifactId>wuic-yuicompressor</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

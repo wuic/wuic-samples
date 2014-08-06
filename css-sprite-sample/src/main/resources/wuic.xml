@@ -15,19 +15,4 @@
             <nut-path>.*.png</nut-path>
         </heap>
     </heaps>
-    <workflow-templates>
-        <workflow-template id="tpl">
-            <without>
-                <engine-builder-id>wuicDefaultMemoryMapCacheEngineBuilder</engine-builder-id>
-            </without>
-            <engine-chain>
-                <engine-builder-id>wuicDefaultEhCacheEngineBuilder</engine-builder-id>
-                <engine-builder-id>wuicDefaultYuiCompressorCssEngineBuilder</engine-builder-id>
-                <engine-builder-id>wuicDefaultYuiCompressorJavascriptEngineBuilder</engine-builder-id>
-            </engine-chain>
-        </workflow-template>
-    </workflow-templates>
-    <workflows>
-        <workflow id="img" workflow-template-id="tpl" heap-id-pattern="img" />
-    </workflows>
 </wuic>

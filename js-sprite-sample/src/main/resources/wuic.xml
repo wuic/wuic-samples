@@ -17,7 +17,7 @@
     </nut-dao-builders>
 
     <engine-builders>
-        <engine-builder id="jsSprite" type="SpriteInspectorEngineBuilder">
+        <engine-builder id="wuicDefaultSpriteInspectorEngineBuilder" type="SpriteInspectorEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.spriteProviderClassName">javascript</property>
             </properties>
@@ -87,17 +87,4 @@
             <nut-path>.*.png</nut-path>
         </heap>
     </heaps>
-
-    <workflow-templates>
-        <workflow-template id="tpl">
-            <without>
-                <engine-builder-id>wuicDefaultMemoryMapCacheEngineBuilder</engine-builder-id>
-            </without>
-            <engine-chain>
-                <engine-builder-id>wuicDefaultEhCacheEngineBuilder</engine-builder-id>
-                <engine-builder-id>wuicDefaultYuiCompressorJavascriptEngineBuilder</engine-builder-id>
-                <engine-builder-id>jsSprite</engine-builder-id>
-            </engine-chain>
-        </workflow-template>
-    </workflow-templates>
 </wuic>

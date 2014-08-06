@@ -6,14 +6,17 @@
     <%@ taglib prefix="wuic-conf" uri="http://www.github.com/wuic/xml-conf" %>
     <wuic-conf:xml-configuration>
         <wuic>
-            <workflows>
-                <workflow id="workflow-index" heap-id-pattern=".*" workflow-template-id="tpl"/>
-            </workflows>
+            <heaps>
+                <heap id="index">
+                    <heap-id>img</heap-id>
+                    <heap-id>cgsg-js</heap-id>
+                </heap>
+            </heaps>
         </wuic>
     </wuic-conf:xml-configuration>
 
     <%@ taglib prefix="wuic" uri="http://www.github.com/wuic" %>
-    <wuic:html-import workflowId="workflow-index"/>
+    <wuic:html-import workflowId="index"/>
 </head>
 <body>
 
@@ -39,7 +42,7 @@
     CGSG.sceneGraph.addNode(root, null);
 
     //Create the Node Image Factory with his specific workflow ID
-    var imageFactory = new WUICCGSGNodeImageFactory("workflow-index");
+    var imageFactory = new WUICCGSGNodeImageFactory("index");
 
     //get the map between imgUrl and spriteUrl
     var imgMap = imageFactory.getImgMap();
