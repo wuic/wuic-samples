@@ -30,6 +30,11 @@
             <groupId>com.github.wuic.extensions</groupId>
             <artifactId>wuic-yuicompressor</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.wuic.extensions</groupId>
+            <artifactId>wuic-htmlcompressor</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

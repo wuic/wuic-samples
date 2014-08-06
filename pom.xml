@@ -72,13 +72,7 @@
     <!-- Engines dependencies need to be explicitly imported by the user -->
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.googlecode.htmlcompressor</groupId>
-                <artifactId>htmlcompressor</artifactId>
-                <version>${htmlcompressor.version}</version>
-            </dependency>
-
-            <!-- J2EE APIs are always provided -->
+            <!-- JEE APIs are always provided -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -102,6 +96,12 @@
             <dependency>
                 <groupId>com.github.wuic</groupId>
                 <artifactId>wuic-tag</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.wuic.extensions</groupId>
+                <artifactId>wuic-htmlcompressor</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -176,6 +176,5 @@
         <jetty8-version>8.1.9.v20130131</jetty8-version>
         <jsp-api.version>2.2</jsp-api.version>
         <servlet-api.version>2.5</servlet-api.version>
-        <htmlcompressor.version>1.5.2</htmlcompressor.version>
     </properties>
 </project>

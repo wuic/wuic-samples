@@ -21,8 +21,8 @@ All samples apply optimizations provided by core module:
         <td><b>Description</b></td>
         <td><b>Additional feature(s)</b></td>
     </tr>
-        <td rowspan="3">bootstrap3-sample</td>
-        <td rowspan="3">
+        <td rowspan="4">bootstrap3-sample</td>
+        <td rowspan="4">
             This sample embeds the bootstrap3 samples and applies the Servlet filter provided by WUIC.
         </td>
         <td>
@@ -31,11 +31,15 @@ All samples apply optimizations provided by core module:
     <tr>
          <td>HTML filter</td>
     </tr>
+    <tr>
          <td>Server-side caching with EhCache</td>
     </tr>
+    </tr>
+         <td>HTML compressor support</td>
+    </tr>
     <tr>
-        <td rowspan="3">js-css-sample</td>
-        <td rowspan="3">
+        <td rowspan="5">js-css-sample</td>
+        <td rowspan="5">
             The webapp embeds the <a href="http://jqueryui.com/resources/download/jquery-ui-1.10.2.zip">JQuery UI</a> archive.
             All the demos have been copied into the '/using-wuic' path to show how to integrate them with WUIC.
             This way, you can see how you can embed uncompressed framework resources and configure a 'production' mode
@@ -54,7 +58,13 @@ All samples apply optimizations provided by core module:
         <td>HTML filter</td>
     </tr>
     <tr>
+        <td>JSP Tag</td>
+    </tr>
+    <tr>
         <td>Server-side caching with EhCache</td>
+    </tr>
+    </tr>
+         <td>HTML compressor support</td>
     </tr>
     <tr>
         <td rowspan="5">js-sprite-sample</td>
