@@ -127,6 +127,7 @@ All samples apply optimizations provided by core module:
     <tr>
         <td>Configuration polling</td>
     </tr>
+    <tr>
         <td>Nut polling</td>
     </tr>
     <tr>
@@ -139,5 +140,19 @@ All samples apply optimizations provided by core module:
         <td>
              Plugin 'static-helper-maven-plugin' for maven.
         </td>
+    </tr>
+    <tr>
+        <td rowspan="3">spring-sample</td>
+        <td rowspan="3">
+            Spring 4.1 offers web resources managements and could be integrated with WUIC as demonstrated by this sample.
+            The view also relies on thymeleaf support.
+        </td>
+        <td>YuiCompressor Javascript & CSS minification</td>
+    </tr>
+    <tr>
+        <td>Spring assets pipeline integration</td>
+    </tr>
+    <tr>
+        <td>Thymelead integration with spring</td>
     </tr>
 </table>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:ng="http://angularjs.org">
+<head wuic:import="app-js">
+  <title>Calculator</title>
+  <link type="text/css" rel="stylesheet" th:href="${beans.resourceUrlProviderHelper.get('/css/app.css')}"/>
+  <script th:src="${beans.resourceUrlProviderHelper.get('/lib/angular/angular.js')}" ng:autobind=""></script>
+</head>
+<body>
+  <div id="calculator" ng:controller="CalculatorController">
+    <div id="display">{{display}}</div>
+    <div id="keys">
+      <button ng:click="number('7')">7</button>
+      <button ng:click="number('8')">8</button>
+      <button ng:click="number('9')">9</button>
+      <button ng:click="key('*')">*</button>
+      <button ng:click="number('4')">4</button>
+      <button ng:click="number('5')">5</button>
+      <button ng:click="number('6')">6</button>
+      <button ng:click="key('/')">/</button>
+      <button ng:click="number('3')">3</button>
+      <button ng:click="number('2')">2</button>
+      <button ng:click="number('1')">1</button>
+      <button ng:click="key('+')">+</button>
+      <button ng:click="negate()">+/-</button>
+      <button ng:click="key('.')">.</button>
+      <button ng:click="number('0')">0</button>
+      <button ng:click="key('-')">-</button>
+      <button class="wide" ng:click="clear()">C</button>
+      <button class="wide" ng:click="key('=')">=</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -13,6 +13,7 @@
         <module>polling-sample</module>
         <module>build-time-sample</module>
         <module>thymeleaf-sample</module>
+        <module>spring-sample</module>
     </modules>
 
     <packaging>pom</packaging>
