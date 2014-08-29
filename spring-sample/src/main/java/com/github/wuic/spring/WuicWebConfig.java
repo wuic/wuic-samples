@@ -50,6 +50,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.resource.ResourceUrlProvider;
+import org.springframework.web.servlet.resource.VersionResourceResolver;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
@@ -136,7 +137,6 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
         handleCss(registry, resourceLocations);
         handleLib(registry, resourceLocations);
         handleJs(registry, resourceLocations);
-
     }
 
     /**
@@ -159,7 +159,8 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
     public void handleCss(final ResourceHandlerRegistry registry, final String resourceLocations) {
         registry.addResourceHandler("/css/**")
                 .addResourceLocations(resourceLocations + "/css/")
-                .addContentVersionStrategy("/**/*");
+                .resourceChain(true)
+                .addResolver(new VersionResourceResolver().addContentVersionStrategy("/**"));
     }
 
     /**
@@ -174,7 +175,8 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
     public void handleLib(final ResourceHandlerRegistry registry, final String resourceLocations) {
         registry.addResourceHandler("/lib/**")
                 .addResourceLocations(resourceLocations + "/lib/")
-                .addFixedVersionStrategy("0.9.13", "/**/*");
+                .resourceChain(true)
+                .addResolver(new VersionResourceResolver().addFixedVersionStrategy("0.9.13", "/**/*"));
     }
 
     /**
@@ -191,7 +193,8 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
     public void handleJs(final ResourceHandlerRegistry registry, final String resourceLocations) {
         registry.addResourceHandler(RESOURCES_CONTEXT_PATH + "**")
                 .addResourceLocations(resourceLocations)
-                .addVersionStrategy(new WuicVersionStrategy(), "/**/*")
+                .resourceChain(true)
+                .addResolver(new VersionResourceResolver().addVersionStrategy(new WuicVersionStrategy(), "/**/*"))
                 .addResolver(new WuicPathResourceResolver(applicationContext.getBean(WuicFacade.class)));
     }
 }
