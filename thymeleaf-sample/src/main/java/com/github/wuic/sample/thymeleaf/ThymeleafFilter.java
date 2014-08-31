@@ -38,6 +38,7 @@
 
 package com.github.wuic.sample.thymeleaf;
 
+import com.github.wuic.jee.WuicServletContextListener;
 import com.github.wuic.thymeleaf.WuicDialect;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -78,7 +79,7 @@ public class ThymeleafFilter implements Filter {
         servletContext = filterConfig.getServletContext();
         templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(createTemplateResolver());
-        templateEngine.setDialect(new WuicDialect());
+        templateEngine.setDialect(new WuicDialect(WuicServletContextListener.getWuicFacade(filterConfig.getServletContext())));
     }
 
     /**

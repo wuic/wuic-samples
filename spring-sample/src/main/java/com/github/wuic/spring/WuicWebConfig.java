@@ -39,6 +39,7 @@
 package com.github.wuic.spring;
 
 import com.github.wuic.WuicFacade;
+import com.github.wuic.WuicFacadeBuilder;
 import com.github.wuic.exception.WuicException;
 import com.github.wuic.thymeleaf.SpringWuicDialect;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,7 +88,10 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
      */
     @Bean
     public WuicFacade wuicFacade() throws WuicException {
-        return WuicFacade.newInstance(RESOURCES_CONTEXT_PATH, getClass().getResource("/wuic.xml"), Boolean.TRUE);
+        return new WuicFacadeBuilder()
+                .contextPath(RESOURCES_CONTEXT_PATH)
+                .wuicXmlPath(getClass().getResource("/wuic.xml"))
+                .build();
     }
 
     /**
@@ -107,7 +111,7 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
 
         final SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver);
-        templateEngine.addDialect(new SpringWuicDialect(resourceUrlProvider, applicationContext.getBean(WuicFacade.class), true));
+        templateEngine.addDialect(new SpringWuicDialect(resourceUrlProvider, applicationContext.getBean(WuicFacade.class)));
 
         final ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine);

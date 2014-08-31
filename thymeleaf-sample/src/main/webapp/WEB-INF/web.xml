@@ -32,12 +32,12 @@
     </filter-mapping>
 
     <context-param>
-        <param-name>c.g.w.wuicContextPath</param-name>
+        <param-name>c.g.wuic.facade.contextPath</param-name>
         <param-value>/wuic</param-value>
     </context-param>
 
     <context-param>
-        <param-name>c.g.w.wuicMultipleConfigInTagSupport</param-name>
+        <param-name>c.g.wuic.facade.multipleConfigInTagSupport</param-name>
         <param-value>false</param-value>
     </context-param>
 </web-app>
