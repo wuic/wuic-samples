@@ -41,7 +41,8 @@ package com.github.wuic.spring;
 import com.github.wuic.WuicFacade;
 import com.github.wuic.WuicFacadeBuilder;
 import com.github.wuic.exception.WuicException;
-import com.github.wuic.thymeleaf.SpringWuicDialect;
+import com.github.wuic.thymeleaf.WuicDialect;
+import com.github.wuic.util.UrlProviderFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -100,18 +101,17 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
      * in templates.
      * </p>
      *
-     * @param resourceUrlProvider the provider that will resolve public URLs
      * @return the view resolver for thymeleaf
      */
     @Bean
-    public ThymeleafViewResolver thymeleafViewResolver(final ResourceUrlProvider resourceUrlProvider) {
+    public ThymeleafViewResolver thymeleafViewResolver() {
         final ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver();
         templateResolver.setPrefix("/WEB-INF/templates/");
         templateResolver.setSuffix(".html");
 
         final SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver);
-        templateEngine.addDialect(new SpringWuicDialect(resourceUrlProvider, applicationContext.getBean(WuicFacade.class)));
+        templateEngine.addDialect(new WuicDialect(applicationContext.getBean(UrlProviderFactory.class), applicationContext.getBean(WuicFacade.class)));
 
         final ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine);
@@ -121,15 +121,15 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
 
     /**
      * <p>
-     * Creates a bean that will be used in thymeleaf template through SPEL to resolve public URLs when not using WUIC.
+     * Creates a bean that produces {@link UrlProviderFactory}.
      * </p>
      *
      * @param resourceUrlProvider the spring url provider
-     * @return the bean exposing method for SPEL
+     * @return the factory
      */
     @Bean
-    public ResourceUrlProviderHelper resourceUrlProviderHelper(final ResourceUrlProvider resourceUrlProvider) {
-        return new ResourceUrlProviderHelper(resourceUrlProvider);
+    public UrlProviderFactory resourceUrlProviderHelper(final ResourceUrlProvider resourceUrlProvider) {
+        return new ResourceUrlProviderHelperFactory(resourceUrlProvider);
     }
 
     /**

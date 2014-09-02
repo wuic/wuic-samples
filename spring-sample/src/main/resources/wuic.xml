@@ -4,18 +4,19 @@
     <nut-dao-builders>
         <nut-dao-builder id ="wuicDefaultClasspathNutDaoBuilder" type="ClasspathNutDaoBuilder">
             <properties>
-                <property key="c.g.wuic.dao.basePath">/statics/js</property>
+                <property key="c.g.wuic.dao.basePath">/statics/</property>
                 <property key="c.g.wuic.dao.contentBasedVersionNumber">true</property>
             </properties>
         </nut-dao-builder>
     </nut-dao-builders>
 
     <heaps>
-        <heap id="app-js" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
-            <nut-path>controllers.js</nut-path>
-            <nut-path>filters.js</nut-path>
-            <nut-path>services.js</nut-path>
-            <nut-path>widgets.js</nut-path>
+        <heap id="app" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
+            <nut-path>js/controllers.js</nut-path>
+            <nut-path>js/filters.js</nut-path>
+            <nut-path>js/services.js</nut-path>
+            <nut-path>js/widgets.js</nut-path>
+            <nut-path>css/app.css</nut-path>
         </heap>
     </heaps>
 </wuic>

@@ -19,13 +19,3 @@
   color: #90ee90;
   font-weight: bold;
 }
-
-#keys button {
-  width:40px;
-  margin:2px;
-}
-
-#keys button.wide {
-  width:88px;
-  margin:2px;
-}
