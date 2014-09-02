@@ -140,7 +140,7 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
         final String resourceLocations = "classpath:/statics/";
         handleCss(registry, resourceLocations);
         handleLib(registry, resourceLocations);
-        handleJs(registry, resourceLocations);
+        handleJs(registry);
     }
 
     /**
@@ -192,11 +192,9 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
      * </p>
      *
      * @param registry the registry
-     * @param resourceLocations the statics base path
      */
-    public void handleJs(final ResourceHandlerRegistry registry, final String resourceLocations) {
+    public void handleJs(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler(RESOURCES_CONTEXT_PATH + "**")
-                .addResourceLocations(resourceLocations)
                 .resourceChain(true)
                 .addResolver(new VersionResourceResolver().addVersionStrategy(new WuicVersionStrategy(), "/**/*"))
                 .addResolver(new WuicPathResourceResolver(applicationContext.getBean(WuicFacade.class)));
