@@ -24,11 +24,6 @@
             <groupId>com.github.wuic.extensions</groupId>
             <artifactId>wuic-thymeleaf</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
