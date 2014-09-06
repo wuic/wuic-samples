@@ -34,11 +34,11 @@
         <param-value>/wuic/</param-value>
     </context-param>
     <context-param>
-        <param-name>c.g.w.wuicXmlPath</param-name>
+        <param-name>c.g.wuic.facade.xmlPath</param-name>
         <param-value>wuic.xml</param-value>
     </context-param>
     <context-param>
-        <param-name>c.g.w.wuicXmlPathAsSystemProperty</param-name>
+        <param-name>c.g.wuic.facade.xmlPathAsSystemProperty</param-name>
         <param-value>true</param-value>
     </context-param>
 
