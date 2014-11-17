@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wuic>
+    <engine-builders>
+        <engine-builder id="wuicDefaultEhCacheEngineBuilder" type="EhCacheEngineBuilder">
+            <properties>
+                <property key="c.g.wuic.engine.bestEffort">true</property>
+            </properties>
+        </engine-builder>
+    </engine-builders>
+</wuic>
