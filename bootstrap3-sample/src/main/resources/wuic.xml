@@ -2,9 +2,10 @@
 
 <wuic>
     <engine-builders>
-        <engine-builder id="wuicDefaultEhCacheEngineBuilder" type="EhCacheEngineBuilder">
+        <engine-builder id="wuicDefaultMemoryMapCacheEngineBuilder" type="MemoryMapCacheEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.bestEffort">true</property>
+                <property key="c.g.wuic.engine.timeToLive">10</property>
             </properties>
         </engine-builder>
     </engine-builders>
