@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wuic>
+    <engine-builders>
+        <engine-builder id="wuicDefaultTypeScriptConverterEngineBuilder" type="TypeScriptConverterEngineBuilder">
+            <properties>
+                <!--
+                    Turn this setting to true in order to use NodeJS.
+                    Make sure to install typescript before (npm -g typescript)
+                    this compiler is faster and can generate sourcemap but you can be platform dependent
+                -->
+                <property key="c.g.wuic.engine.useNodeJs">false</property>
+            </properties>
+        </engine-builder>
+
+        <engine-builder id="wuicDefaultMemoryMapCacheEngineBuilder" type="MemoryMapCacheEngineBuilder">
+            <properties>
+                <!-- In best effort, sourcemap won't be generated -->
+                <property key="c.g.wuic.engine.bestEffort">true</property>
+            </properties>
+        </engine-builder>
+    </engine-builders>
+</wuic>

@@ -153,6 +153,20 @@ All samples apply optimizations provided by core module:
         <td>Spring assets pipeline integration</td>
     </tr>
     <tr>
-        <td>Thymelead integration with spring</td>
+        <td>Thymeleaf integration with spring</td>
+    </tr>
+    <tr>
+        <td rowspan="3">typescript-sample</td>
+        <td rowspan="3">
+            Typescript must be compiled into javascript to be interpreted by the browser.
+            This sample demonstrates how WUIC does it transparently.
+        </td>
+        <td>WRO4J based extension</td>
+    </tr>
+    <tr>
+        <td>Cross-platform support (rhino)</td>
+    </tr>
+    <tr>
+        <td>Node.JS support</td>
     </tr>
 </table>
