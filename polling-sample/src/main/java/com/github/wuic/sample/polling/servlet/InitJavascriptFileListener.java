@@ -38,7 +38,6 @@
 
 package com.github.wuic.sample.polling.servlet;
 
-import com.github.wuic.exception.wrapper.StreamException;
 import com.github.wuic.util.IOUtils;
 
 import javax.servlet.ServletContextEvent;
@@ -93,8 +92,6 @@ public class InitJavascriptFileListener implements ServletContextListener {
             IOUtils.copyStream(is, os);
         } catch (IOException ioe) {
             throw new IllegalStateException(ioe);
-        } catch (StreamException se) {
-            throw new IllegalStateException(se);
         } finally {
             IOUtils.close(is, os);
         }
@@ -108,8 +105,6 @@ public class InitJavascriptFileListener implements ServletContextListener {
             IOUtils.copyStream(is, os);
         } catch (IOException ioe) {
             throw new IllegalStateException(ioe);
-        } catch (StreamException se) {
-            throw new IllegalStateException(se);
         } finally {
             IOUtils.close(is, os);
         }

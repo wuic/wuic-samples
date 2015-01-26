@@ -38,7 +38,6 @@
 
 package com.github.wuic.sample.polling.servlet;
 
-import com.github.wuic.exception.wrapper.StreamException;
 import com.github.wuic.util.IOUtils;
 import com.github.wuic.xml.XmlPropertyBean;
 import com.github.wuic.xml.XmlWuicBean;
@@ -49,8 +48,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * <p>
@@ -70,7 +73,7 @@ public class SaveServlet extends HttpServlet {
     protected void doPost(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
         InputStream is = null;
         OutputStream os = null;
-        File file = null;
+        File file;
 
         try {
             // Save script
@@ -79,8 +82,6 @@ public class SaveServlet extends HttpServlet {
             is = new ByteArrayInputStream(code.getBytes());
             os = new FileOutputStream(file);
             IOUtils.copyStream(is, os);
-        } catch (StreamException se) {
-            throw new ServletException(se);
         } finally {
             IOUtils.close(is, os);
         }
