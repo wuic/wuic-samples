@@ -2,7 +2,11 @@
 <html xmlns:ng="http://angularjs.org">
 <head wuic:import="app">
   <title>Calculator</title>
-  <!--link type="text/css" rel="stylesheet" th:href="${beans.resourceUrlProviderHelper.get('/css/app.css')}"/-->
+    <!--
+        Uncomment this line if you want to see 'resourceUrlProviderHelper' bean managing CSS without WUIC
+        Also don't forget to comment the import in wuic.xml line and uncomment the handleCss() call in WuicWebConfig
+    -->
+    <!--link type="text/css" rel="stylesheet" th:href="${beans.resourceUrlProviderHelper.get('/css/app.css')}"/-->
   <script th:src="${beans.resourceUrlProviderHelper.get('/lib/angular/angular.js')}" ng:autobind=""></script>
 </head>
 <body>

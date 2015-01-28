@@ -13,6 +13,11 @@
     <heaps>
         <heap id="app" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
             <nut-path>js/controllers.js</nut-path>
+
+            <!--
+                Comment this line if you want to see 'resourceUrlProviderHelper' bean managing CSS without WUIC
+                Also don't forget to uncomment the import in index.html line and the handleCss() call in WuicWebConfig
+            -->
             <nut-path>css/app.css</nut-path>
         </heap>
     </heaps>
