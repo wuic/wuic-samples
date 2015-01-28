@@ -13,9 +13,6 @@
     <heaps>
         <heap id="app" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
             <nut-path>js/controllers.js</nut-path>
-            <nut-path>js/filters.js</nut-path>
-            <nut-path>js/services.js</nut-path>
-            <nut-path>js/widgets.js</nut-path>
             <nut-path>css/app.css</nut-path>
         </heap>
     </heaps>
