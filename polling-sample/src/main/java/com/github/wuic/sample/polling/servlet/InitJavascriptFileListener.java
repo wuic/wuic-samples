@@ -39,6 +39,8 @@
 package com.github.wuic.sample.polling.servlet;
 
 import com.github.wuic.util.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -71,6 +73,11 @@ public class InitJavascriptFileListener implements ServletContextListener {
     public static final String FILE_NAME = "nut-polling-sample.js";
 
     /**
+     * The logger.
+     */
+    private final Logger log = LoggerFactory.getLogger(getClass());
+
+    /**
      * {@inheritDoc}
      */
     @Override
@@ -79,9 +86,7 @@ public class InitJavascriptFileListener implements ServletContextListener {
         OutputStream os = null;
 
         final File dir = new File(DIRECTORY_PATH);
-        if (dir.mkdirs()) {
-            throw new IllegalStateException("Can't initialize sample : unable to create " + DIRECTORY_PATH);
-        }
+        log.info("Creating {}: {}", DIRECTORY_PATH, dir.mkdirs());
 
         // Prepare nut
         System.setProperty("wuic.dir", DIRECTORY_PATH);
