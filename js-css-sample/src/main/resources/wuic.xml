@@ -23,6 +23,12 @@
 
         <engine-builder id="wuicDefaultYuiCompressorCssEngineBuilder" type="YuiCompressorCssEngineBuilder">
             <properties>
+                <property key="c.g.wuic.engine.compress">false</property>
+            </properties>
+        </engine-builder>
+
+        <engine-builder id="wuicDefaultYuiCompressorJavascriptEngineBuilder" type="YuiCompressorJavascriptEngineBuilder">
+            <properties>
                 <property key="c.g.wuic.engine.compress">true</property>
             </properties>
         </engine-builder>
