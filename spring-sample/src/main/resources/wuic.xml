@@ -10,6 +10,15 @@
         </nut-dao-builder>
     </nut-dao-builders>
 
+    <engine-builders>
+        <engine-builder id="wuicDefaultYuiCompressorJavascriptEngineBuilder" type="YuiCompressorJavascriptEngineBuilder">
+            <properties>
+                <!-- Won't break AngularJS dependency resolution -->
+                <property key="c.g.wuic.engine.obfuscate">false</property>
+            </properties>
+        </engine-builder>
+    </engine-builders>
+
     <heaps>
         <heap id="app" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
             <nut-path>js/controllers.js</nut-path>
