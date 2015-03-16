@@ -1,0 +1,1 @@
+Note: to see logs related to the scheduled polling operation, run the webapp with the property '-Dorg.slf4j.simpleLogger.log.com.github.wuic.Logging.POLL=TRACE'
