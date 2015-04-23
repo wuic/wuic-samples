@@ -86,49 +86,42 @@
                 <groupId>com.github.wuic</groupId>
                 <artifactId>wuic-servlet</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic</groupId>
                 <artifactId>wuic-tag</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic.extensions</groupId>
                 <artifactId>wuic-htmlcompressor</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic.extensions</groupId>
                 <artifactId>wuic-ehcache</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic.extensions</groupId>
                 <artifactId>wuic-yuicompressor</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic.extensions</groupId>
                 <artifactId>wuic-thymeleaf</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.github.wuic.extensions</groupId>
                 <artifactId>wuic-typescript</artifactId>
                 <version>${project.version}</version>
-                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -182,7 +175,7 @@
                         -Xbootclasspath/p:${settings.localRepository}/org/mortbay/jetty/alpn/alpn-boot/${alpn-version}/alpn-boot-${alpn-version}.jar
                     </jvmArgs>
                     <contextXml>../jetty-context.xml</contextXml>
-                    <useProvidedScope>true</useProvidedScope>
+                    <!--useProvidedScope>true</useProvidedScope-->
                 </configuration>
                 <dependencies>
                     <!-- Transitive dependency -->
@@ -190,6 +183,11 @@
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-api</artifactId>
                         <version>${slf4j.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.github.wuic</groupId>
+                        <artifactId>wuic-servlet</artifactId>
+                        <version>${project.version}</version>
                     </dependency>
 
                     <!-- Additional jetty libraries to satisfy jetty.xml configuration requirements -->
