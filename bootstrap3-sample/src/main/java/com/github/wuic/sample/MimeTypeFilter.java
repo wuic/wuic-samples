@@ -36,7 +36,7 @@
  */
 
 
-package com.github.wuic.samples;
+package com.github.wuic.sample;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
