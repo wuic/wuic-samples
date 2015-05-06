@@ -53,7 +53,9 @@
     data.y = 0;
 
     // Add each image to the scene
-    for (var i = 0; i < imgMap.getLength(); i++) {
+    // Do not use '&lt;' in the code until this issue is fixed: https://github.com/wuic/wuic/issues/182
+    var i = 0;
+    while (i !== imgMap.getLength()) {
 
         //create the CGSGNodeImage with the WUIC factory
         var node = imageFactory.create(imgMap.getAt(i).key, data);
@@ -71,6 +73,8 @@
         if (node.position.x + node.getWidth() > maxW) {
             maxW = node.position.x + node.getWidth();
         }
+
+        i++;
     }
 
     var aggregateText = new CGSGNodeText(100 + maxW, 5, "Downloaded image : ");
