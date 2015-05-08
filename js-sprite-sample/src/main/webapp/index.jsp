@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Sample JS sprites (with cgSceneGraph)</title>
+    <title>Sample JS sprites (with cgSceneGraph) - Page generation timestamp: <%=System.currentTimeMillis()%></title>
 
     <%@ taglib prefix="wuic-conf" uri="http://www.github.com/wuic/xml-conf" %>
     <wuic-conf:xml-configuration>

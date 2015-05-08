@@ -25,6 +25,16 @@
         <listener-class>com.github.wuic.jee.WuicServletContextListener</listener-class>
     </listener>
 
+    <filter>
+        <filter-name>htmlParserFiler</filter-name>
+        <filter-class>com.github.wuic.servlet.HtmlParserFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>htmlParserFiler</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
     <context-param>
         <param-name>c.g.wuic.facade.multipleConfigInTagSupport</param-name>
         <param-value>false</param-value>
