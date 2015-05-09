@@ -14,9 +14,6 @@
             </heaps>
         </wuic>
     </wuic-conf:xml-configuration>
-
-    <%@ taglib prefix="wuic" uri="http://www.github.com/wuic" %>
-    <wuic:html-import workflowId="index"/>
 </head>
 <body>
 
@@ -24,6 +21,8 @@
     Your browser does not support the canvas element.
 </canvas>
 
+<%@ taglib prefix="wuic" uri="http://www.github.com/wuic" %>
+<wuic:html-import workflowId="index"/>
 <script type="text/javascript">
     // Get the canvas
     var canvasScene = document.getElementById("scene");
@@ -42,7 +41,7 @@
     CGSG.sceneGraph.addNode(root, null);
 
     //Create the Node Image Factory with his specific workflow ID
-    var imageFactory = new WUICCGSGNodeImageFactory("index");
+    var imageFactory = new WUICCGSGNodeImageFactory("img");
 
     //get the map between imgUrl and spriteUrl
     var imgMap = imageFactory.getImgMap();
