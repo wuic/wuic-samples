@@ -33,7 +33,7 @@
             <exclusions>
                 <exclusion>
                     <groupId>com.github.wuic</groupId>
-                    <artifactId>wuic-jee</artifactId>
+                    <artifactId>wuic-servlet</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
