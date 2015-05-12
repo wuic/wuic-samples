@@ -17,10 +17,6 @@
         <url-pattern>/wuic/*</url-pattern>
     </servlet-mapping>
 
-    <listener>
-        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
-    </listener>
-
     <filter>
         <filter-name>thymeleafFilter</filter-name>
         <filter-class>com.github.wuic.sample.thymeleaf.ThymeleafFilter</filter-class>

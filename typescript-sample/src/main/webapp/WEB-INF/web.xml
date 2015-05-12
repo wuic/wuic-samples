@@ -26,8 +26,4 @@
         <filter-name>htmlParserFilter</filter-name>
         <url-pattern>*.html</url-pattern>
     </filter-mapping>
-
-    <listener>
-        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
-    </listener>
 </web-app>

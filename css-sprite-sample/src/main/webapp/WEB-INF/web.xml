@@ -26,8 +26,4 @@
         <param-name>c.g.w.wuicWarmupStrategy</param-name>
         <param-value>SYNC</param-value>
     </context-param>
-
-    <listener>
-        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
-    </listener>
 </web-app>

@@ -41,8 +41,4 @@
     <listener>
         <listener-class>com.github.wuic.sample.polling.servlet.InitJavascriptFileListener</listener-class>
     </listener>
-    <listener>
-        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
-    </listener>
-
 </web-app>

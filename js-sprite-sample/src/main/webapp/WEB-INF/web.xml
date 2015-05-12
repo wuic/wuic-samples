@@ -16,10 +16,6 @@
         <url-pattern>/wuic/*</url-pattern>
     </servlet-mapping>
 
-    <listener>
-        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
-    </listener>
-
     <filter>
         <filter-name>htmlParserFiler</filter-name>
         <filter-class>com.github.wuic.servlet.HtmlParserFilter</filter-class>
