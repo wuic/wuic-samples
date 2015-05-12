@@ -30,10 +30,6 @@
 
     <!-- WUIC's parameters -->
     <context-param>
-        <param-name>c.g.wuic.facade.contextPath</param-name>
-        <param-value>/wuic/</param-value>
-    </context-param>
-    <context-param>
         <param-name>c.g.wuic.facade.xmlPath</param-name>
         <param-value>wuic.xml</param-value>
     </context-param>
@@ -46,7 +42,7 @@
         <listener-class>com.github.wuic.sample.polling.servlet.InitJavascriptFileListener</listener-class>
     </listener>
     <listener>
-        <listener-class>com.github.wuic.jee.WuicServletContextListener</listener-class>
+        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
     </listener>
 
 </web-app>

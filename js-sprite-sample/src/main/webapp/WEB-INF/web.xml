@@ -16,13 +16,8 @@
         <url-pattern>/wuic/*</url-pattern>
     </servlet-mapping>
 
-    <context-param>
-        <param-name>c.g.wuic.facade.contextPath</param-name>
-        <param-value>/wuic/</param-value>
-    </context-param>
-
     <listener>
-        <listener-class>com.github.wuic.jee.WuicServletContextListener</listener-class>
+        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
     </listener>
 
     <filter>

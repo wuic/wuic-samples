@@ -18,7 +18,7 @@
     </servlet-mapping>
 
     <listener>
-        <listener-class>com.github.wuic.jee.WuicServletContextListener</listener-class>
+        <listener-class>com.github.wuic.servlet.WuicServletContextListener</listener-class>
     </listener>
 
     <filter>
@@ -30,11 +30,6 @@
         <filter-name>thymeleafFilter</filter-name>
         <url-pattern>/sample/scroller/index.html</url-pattern>
     </filter-mapping>
-
-    <context-param>
-        <param-name>c.g.wuic.facade.contextPath</param-name>
-        <param-value>/wuic</param-value>
-    </context-param>
 
     <context-param>
         <param-name>c.g.wuic.facade.multipleConfigInTagSupport</param-name>
