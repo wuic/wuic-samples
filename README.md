@@ -1,10 +1,21 @@
 The table below describes every samples of the WUIC project. Each sample is a module defined in 'samples'.
 Samples are not hosted in maven central. To use them, simply download the project's archive on github, move
-into the desired sample module and just run :
+into the desired sample module and just run:
 
 ```
-  mvn jetty:run
+  mvn jetty:run-forked
 ```
+
+Jetty 9 starts and listen port 9090 with the HTTP/2 connector. Check the parent's pom.xml to see the right JDK 8 version to use.
+The port 8080 will be also listened with the HTTP/1.1 connector.
+
+Alternatively, you can run:
+
+```
+  mvn jetty:run -Pjetty8
+```
+
+Jetty 8 starts and listen port 8080 with the HTTP/1.1 connector. JDK 6 is required.
 
 Some samples are currently available on the 'SNAPSHOT' branche. However, you can use them until they will be released.
 All samples apply optimizations provided by core module:
