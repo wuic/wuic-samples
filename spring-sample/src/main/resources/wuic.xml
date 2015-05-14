@@ -2,7 +2,7 @@
 
 <wuic>
     <nut-dao-builders>
-        <nut-dao-builder id ="wuicDefaultClasspathNutDaoBuilder" type="ClasspathNutDaoBuilder">
+        <nut-dao-builder type="ClasspathNutDaoBuilder">
             <properties>
                 <property key="c.g.wuic.dao.basePath">/statics/</property>
                 <property key="c.g.wuic.dao.contentBasedVersionNumber">true</property>
@@ -11,7 +11,7 @@
     </nut-dao-builders>
 
     <engine-builders>
-        <engine-builder id="wuicDefaultYuiCompressorJavascriptEngineBuilder" type="YuiCompressorJavascriptEngineBuilder">
+        <engine-builder type="YuiCompressorJavascriptEngineBuilder">
             <properties>
                 <!-- Won't break AngularJS dependency resolution -->
                 <property key="c.g.wuic.engine.obfuscate">false</property>
@@ -20,7 +20,7 @@
     </engine-builders>
 
     <heaps>
-        <heap id="app" dao-builder-id="wuicDefaultClasspathNutDaoBuilder">
+        <heap id="app">
             <nut-path>js/controllers.js</nut-path>
 
             <!--

@@ -3,7 +3,7 @@
 <wuic>
     <!-- UNCOMMENT THIS WORKAROUND FOR FIX UNDERTOW-357 -->
     <!--nut-dao-builders>
-        <nut-dao-builder id="wuicDefaultRequestDispatcherNutDaoBuilder" type="RequestDispatcherNutDaoBuilder">
+        <nut-dao-builder type="RequestDispatcherNutDaoBuilder">
             <properties>
                 <property key="c.g.wuic.computeVersionAsynchronously">false</property>
             </properties>
@@ -11,7 +11,7 @@
     </nut-dao-builders-->
 
     <engine-builders>
-        <engine-builder id="wuicDefaultMemoryMapCacheEngineBuilder" type="MemoryMapCacheEngineBuilder">
+        <engine-builder type="MemoryMapCacheEngineBuilder">
             <properties>
                 <!-- COMMENT BEST EFFORT WORKAROUND FOR FIX UNDERTOW-357 -->
                 <property key="c.g.wuic.engine.bestEffort">true</property>
@@ -20,7 +20,7 @@
         </engine-builder>
 
         <!-- UNCOMMENT THIS WORKAROUND FOR FIX UNDERTOW-357 -->
-        <!--engine-builder id="wuicDefaultTextAggregatorEngineBuilder" type="TextAggregatorEngineBuilder">
+        <!--engine-builder type="TextAggregatorEngineBuilder">
             <properties>
                 <property key="c.g.wuic.computeVersionAsynchronously">false</property>
             </properties>

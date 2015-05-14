@@ -2,7 +2,7 @@
 
 <wuic>
     <engine-builders>
-        <engine-builder id="wuicDefaultTypeScriptConverterEngineBuilder" type="TypeScriptConverterEngineBuilder">
+        <engine-builder type="TypeScriptConverterEngineBuilder">
             <properties>
                 <!--
                     Turn this setting to true in order to use NodeJS.
@@ -13,7 +13,7 @@
             </properties>
         </engine-builder>
 
-        <engine-builder id="wuicDefaultMemoryMapCacheEngineBuilder" type="MemoryMapCacheEngineBuilder">
+        <engine-builder type="MemoryMapCacheEngineBuilder">
             <properties>
                 <!-- In best effort, sourcemap won't be generated -->
                 <property key="c.g.wuic.engine.bestEffort">true</property>

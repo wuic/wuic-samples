@@ -13,32 +13,32 @@
                 <property key="c.g.wuic.dao.basePath">jquery-ui-1.10.2</property>
             </properties>
         </nut-dao-builder>
-        <nut-dao-builder id="wuicDefaultRequestDispatcherNutDaoBuilder" type="RequestDispatcherNutDaoBuilder">
+        <nut-dao-builder type="RequestDispatcherNutDaoBuilder">
             <properties>
                 <property key="c.g.wuic.computeVersionAsynchronously">false</property>
             </properties>
         </nut-dao-builder>
     </nut-dao-builders>
     <engine-builders>
-        <engine-builder id="wuicDefaultTextAggregatorEngineBuilder" type="TextAggregatorEngineBuilder">
+        <engine-builder type="TextAggregatorEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.aggregate">true</property>
             </properties>
         </engine-builder>
 
-        <engine-builder id="wuicDefaultYuiCompressorCssEngineBuilder" type="YuiCompressorCssEngineBuilder">
+        <engine-builder type="YuiCompressorCssEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.compress">false</property>
             </properties>
         </engine-builder>
 
-        <engine-builder id="wuicDefaultYuiCompressorJavascriptEngineBuilder" type="YuiCompressorJavascriptEngineBuilder">
+        <engine-builder type="YuiCompressorJavascriptEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.compress">true</property>
             </properties>
         </engine-builder>
 
-        <engine-builder id="wuicDefaultMemoryMapCacheEngineBuilder" type="MemoryMapCacheEngineBuilder">
+        <engine-builder type="MemoryMapCacheEngineBuilder">
             <properties>
                 <property key="c.g.wuic.engine.bestEffort">true</property>
             </properties>
