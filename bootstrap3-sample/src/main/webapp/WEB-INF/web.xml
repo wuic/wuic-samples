@@ -2,14 +2,15 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5">
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
 
     <servlet>
         <description>WUIC servlet</description>
         <servlet-name>wuic</servlet-name>
         <servlet-class>com.github.wuic.servlet.WuicServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
     </servlet>
 
     <servlet-mapping>
@@ -20,11 +21,13 @@
     <filter>
         <filter-name>htmlParserFilter</filter-name>
         <filter-class>com.github.wuic.servlet.HtmlParserFilter</filter-class>
+        <async-supported>true</async-supported>
     </filter>
 
     <filter>
         <filter-name>mimeTypeFilter</filter-name>
         <filter-class>com.github.wuic.sample.MimeTypeFilter</filter-class>
+        <async-supported>true</async-supported>
     </filter>
 
     <filter-mapping>
