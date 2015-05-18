@@ -16,7 +16,8 @@
         <engine-builder type="MemoryMapCacheEngineBuilder">
             <properties>
                 <!-- In best effort, sourcemap won't be generated -->
-                <property key="c.g.wuic.engine.bestEffort">true</property>
+                <!-- In best effort, aggregation is disabled, reproducing the issue https://github.com/wuic/wuic/issues/168 -->
+                <property key="c.g.wuic.engine.bestEffort">false</property>
             </properties>
         </engine-builder>
     </engine-builders>
