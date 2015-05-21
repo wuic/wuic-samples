@@ -294,6 +294,6 @@
         <!-- See matrix version: http://eclipse.org/jetty/documentation/current/alpn-chapter.html#alpn-versions -->
         <alpn-version>8.1.3.v20150130</alpn-version>
         <jetty8-version>8.1.9.v20130131</jetty8-version>
-        <jetty9-version>9.3.0.M2</jetty9-version>
+        <jetty9-version>9.3.0.RC0</jetty9-version>
     </properties>
 </project>
