@@ -46,6 +46,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import java.io.IOException;
 
+// tag::MimeTypeFilter[]
 /**
  * Workaround for https://issues.jboss.org/browse/UNDERTOW-268 issue.
  *
@@ -81,3 +82,4 @@ public class MimeTypeFilter implements Filter {
     public void destroy() {
     }
 }
+// end::MimeTypeFilter[]
