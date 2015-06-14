@@ -1,0 +1,10 @@
+<project>
+    <target name="wuic-task">
+        <taskdef name="wuic" classname="com.github.wuic.WuicTask" classpath="${wuic-jar}"/>
+        <wuic xml="src/main/resources/wuic-ant.xml"
+              properties="target/classes/wuic-ant.properties"
+              relocateTransformedXmlTo="${wuic-output}/WEB-INF/classes"
+              output="${wuic-output}"
+        />
+    </target>
+</project>
