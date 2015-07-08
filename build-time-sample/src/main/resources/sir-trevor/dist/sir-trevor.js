@@ -1114,15 +1114,15 @@
       var img = $("<img>", {
         src: item.data.file.thumb.url
       });
-      
+
       var list = $('<li>', {
         id: _.uniqueId('gallery-item'),
-        class: 'gallery-item',
+        "class": 'gallery-item',
         html: img
       });
       
       list.append($("<span>", {
-        class: 'delete',
+        "class": 'delete',
         click: _.bind(function(e){
           // Remove this item
           halt(e);

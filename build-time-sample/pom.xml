@@ -55,6 +55,13 @@
                             <relocateTransformedXml>true</relocateTransformedXml>
                             <output>${project.build.finalName}</output>
                         </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.github.wuic.extensions</groupId>
+                                <artifactId>wuic-yuicompressor</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
+                        </dependencies>
                     </plugin>
                 </plugins>
             </build>
