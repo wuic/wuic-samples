@@ -30,4 +30,9 @@
         <param-name>c.g.wuic.facade.multipleConfigInTagSupport</param-name>
         <param-value>false</param-value>
     </context-param>
+
+    <context-param>
+        <param-name>c.g.wuic.facade.additionalBuilderInspectorClasses</param-name>
+        <param-value>com.github.wuic.sample.FunctionWrapperObjectBuilderInspector</param-value>
+    </context-param>
 </web-app>
