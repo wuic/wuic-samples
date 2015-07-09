@@ -21,6 +21,11 @@
         </dependency>
     </dependencies>
 
+    <properties>
+        <!-- Change this value regarding the webapp's context path-->
+        <contextPath></contextPath>
+    </properties>
+
     <profiles>
         <profile>
             <id>build</id>
@@ -54,6 +59,7 @@
                             <xml>src/main/resources/wuic.xml</xml>
                             <relocateTransformedXml>true</relocateTransformedXml>
                             <output>${project.build.finalName}</output>
+                            <contextPath>${contextPath}</contextPath>
                         </configuration>
                         <dependencies>
                             <dependency>

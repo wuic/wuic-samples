@@ -5,6 +5,7 @@
               properties="target/classes/wuic-ant.properties"
               relocateTransformedXmlTo="${wuic-output}/WEB-INF/classes"
               output="${wuic-output}"
+              contextPath="${contextPath}"
         />
     </target>
 </project>
