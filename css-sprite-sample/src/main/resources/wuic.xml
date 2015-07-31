@@ -2,7 +2,7 @@
 
 <wuic>
     <nut-dao-builders>
-        <nut-dao-builder id="imgSourceRootProvider" type="ClasspathNutDaoBuilder">
+        <nut-dao-builder type="ClasspathNutDaoBuilder">
             <properties>
                 <property key="c.g.wuic.dao.basePath">/img</property>
                 <property key="c.g.wuic.dao.regex">true</property>
@@ -11,7 +11,7 @@
         </nut-dao-builder>
     </nut-dao-builders>
     <heaps>
-        <heap id="img" dao-builder-id="imgSourceRootProvider">
+        <heap id="img">
             <nut-path>.*.png</nut-path>
         </heap>
     </heaps>
