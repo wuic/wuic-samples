@@ -42,4 +42,48 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>build-time</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <!-- we exclude this file because its transformation will be added by the plugin -->
+                            <exclude>wuic.xml</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.wuic.plugins</groupId>
+                        <artifactId>static-helper-maven-plugin</artifactId>
+                        <version>${project.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>process</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <xml>src/main/resources/wuic.xml</xml>
+                            <relocateTransformedXml>true</relocateTransformedXml>
+                            <output>${project.build.finalName}</output>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.github.wuic.extensions</groupId>
+                                <artifactId>wuic-yuicompressor</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

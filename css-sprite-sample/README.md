@@ -1,0 +1,2 @@
+This sample can be run with a `mvn jetty:run-forked` command. It will perform optimizations at runtime.
+If you want to perform optimization during maven build just run `mvn jetty:run-forked -Pbuild-time`.
