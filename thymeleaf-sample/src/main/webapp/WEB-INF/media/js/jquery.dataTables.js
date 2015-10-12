@@ -31,7 +31,7 @@
 	// Define as an AMD module if possible
 	if ( typeof define === 'function' && define.amd )
 	{
-		define( ['jquery'], factory );
+		define( ['jquery-1.11.3.js'], factory );
 	}
 	/* Define using browser globals otherwise
 	 * Prevent multiple instantiations if the script is loaded twice
