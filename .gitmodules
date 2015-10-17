@@ -1,0 +1,3 @@
+[submodule "js-html-kanban"]
+	path = js-html-kanban
+	url = https://github.com/wuic/js-html-kanban
