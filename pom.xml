@@ -23,6 +23,7 @@
         <module>thymeleaf-sample</module>
         <module>spring-sample</module>
         <module>typescript-sample</module>
+        <module>js-html-kanban</module>
     </modules>
 
     <packaging>pom</packaging>
