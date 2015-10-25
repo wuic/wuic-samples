@@ -59,6 +59,7 @@ import java.io.OutputStream;
  * @version 1.0
  * @since 0.5.2
  */
+@ObjectBuilderInspector.InspectedType(TextAggregatorEngine.class)
 public class FunctionWrapperObjectBuilderInspector implements ObjectBuilderInspector, Pipe.Transformer<ConvertibleNut> {
 
     /**
@@ -66,9 +67,7 @@ public class FunctionWrapperObjectBuilderInspector implements ObjectBuilderInspe
      */
     @Override
     public <T> T inspect(T object) {
-        if (object instanceof TextAggregatorEngine) {
-            TextAggregatorEngine.class.cast(object).addTransformer(this);
-        }
+        TextAggregatorEngine.class.cast(object).addTransformer(this);
 
         return object;
     }
