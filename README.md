@@ -172,10 +172,24 @@ All samples apply optimizations provided by core module:
             Typescript must be compiled into javascript to be interpreted by the browser.
             This sample demonstrates how WUIC does it transparently.
         </td>
-        <td>WRO4J based extension</td>
+        <td>Typescript4j based extension</td>
     </tr>
     <tr>
         <td>Cross-platform support (rhino)</td>
+    </tr>
+    <tr>
+        <td>Node.JS support</td>
+    </tr>
+    <tr>
+        <td rowspan="3">js-html-sample</td>
+        <td rowspan="3">
+            Command line can be executed to process statics.
+            This example shows how browserify, exorcist and ulglify are executed by WUIC in a NodeJS environment.
+        </td>
+        <td>frontend-maven-plugin based extension</td>
+    </tr>
+    <tr>
+        <td>ReactJS transformation</td>
     </tr>
     <tr>
         <td>Node.JS support</td>
