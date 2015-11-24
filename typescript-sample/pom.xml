@@ -21,6 +21,11 @@
 
         <dependency>
             <groupId>com.github.wuic.extensions</groupId>
+            <artifactId>wuic-attoparser</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.wuic.extensions</groupId>
             <artifactId>wuic-typescript</artifactId>
         </dependency>
     </dependencies>
