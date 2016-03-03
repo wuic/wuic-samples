@@ -37,10 +37,6 @@
         <param-name>c.g.wuic.facade.xmlPathAsSystemProperty</param-name>
         <param-value>true</param-value>
     </context-param>
-    <context-param>
-        <param-name>c.g.wuic.facade.multipleConfigInTagSupport</param-name>
-        <param-value>false</param-value>
-    </context-param>
 
     <listener>
         <listener-class>com.github.wuic.sample.polling.servlet.InitJavascriptFileListener</listener-class>
