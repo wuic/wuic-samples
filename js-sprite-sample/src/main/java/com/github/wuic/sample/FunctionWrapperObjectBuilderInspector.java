@@ -40,6 +40,7 @@ package com.github.wuic.sample;
 
 import com.github.wuic.NutType;
 import com.github.wuic.config.ObjectBuilderInspector;
+import com.github.wuic.engine.EngineType;
 import com.github.wuic.engine.core.TextAggregatorEngine;
 import com.github.wuic.nut.ConvertibleNut;
 import com.github.wuic.util.IOUtils;
@@ -91,5 +92,13 @@ public class FunctionWrapperObjectBuilderInspector implements ObjectBuilderInspe
     @Override
     public boolean canAggregateTransformedStream() {
         return false;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int order() {
+        return EngineType.AGGREGATOR.ordinal();
     }
 }
