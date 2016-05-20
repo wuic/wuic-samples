@@ -38,6 +38,7 @@
 
 package com.github.wuic.sample.polling.servlet;
 
+import com.github.wuic.ApplicationConfig;
 import com.github.wuic.util.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -103,7 +104,7 @@ public class InitJavascriptFileListener implements ServletContextListener {
         // Prepare wuic.xml
         try {
             final File file = new File(dir, "wuic.xml");
-            System.setProperty("wuic.xml", file.toURI().toURL().toString());
+            System.setProperty(ApplicationConfig.WUIC_SERVLET_XML_PATH_PARAM, file.toURI().toURL().toString());
             is = getClass().getResourceAsStream("/default-wuic.xml");
             os = new FileOutputStream(file);
             IOUtils.copyStream(is, os);

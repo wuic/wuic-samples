@@ -28,16 +28,6 @@
         <url-pattern>/wuic/*</url-pattern>
     </servlet-mapping>
 
-    <!-- WUIC's parameters -->
-    <context-param>
-        <param-name>c.g.wuic.facade.xmlPath</param-name>
-        <param-value>wuic.xml</param-value>
-    </context-param>
-    <context-param>
-        <param-name>c.g.wuic.facade.xmlPathAsSystemProperty</param-name>
-        <param-value>true</param-value>
-    </context-param>
-
     <listener>
         <listener-class>com.github.wuic.sample.polling.servlet.InitJavascriptFileListener</listener-class>
     </listener>
