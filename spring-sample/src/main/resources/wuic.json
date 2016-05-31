@@ -1,0 +1,25 @@
+{
+    "nutDaoBuilders": [{
+        "type": "ClasspathNutDaoBuilder",
+        "properties": {
+            "c.g.wuic.dao.basePath" : "/statics/",
+            "c.g.wuic.dao.contentBasedVersionNumber" : "true"
+        }
+    }],
+    "engineBuilders":  [{
+        "type": "YuiCompressorJavascriptEngineBuilder",
+        "properties": {
+            // Won't break AngularJS dependency resolution
+            "c.g.wuic.engine.obfuscate" : "false"
+        }
+    }],
+    "heaps": [{
+        "id": "app",
+        "nutPath": [
+            "js/controllers.js",
+            // Comment this line if you want to see 'resourceUrlProviderHelper' bean managing CSS without WUIC
+            // Also don't forget to uncomment the import in index.html line and the handleCss() call in WuicWebConfig
+            "css/app.css"
+        ]
+    }]
+}

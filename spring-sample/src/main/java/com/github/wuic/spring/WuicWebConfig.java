@@ -100,7 +100,7 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
     public WuicFacade wuicFacade() throws WuicException {
         return new WuicFacadeBuilder()
                 .contextPath(RESOURCES_CONTEXT_PATH)
-                .wuicXmlPath(getClass().getResource("/wuic.xml"))
+                .wuicConfigurationPath(getClass().getResource("/wuic.json"))
                 .build();
     }
 

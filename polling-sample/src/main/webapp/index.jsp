@@ -5,7 +5,7 @@
 <%@ page import="com.github.wuic.sample.polling.servlet.InitJavascriptFileListener" %>
 <%@ page import="java.io.File" %>
 <%@ page import="javax.xml.bind.JAXBContext" %>
-<%@ page import="com.github.wuic.xml.XmlWuicBean" %>
+<%@ page import="com.github.wuic.config.bean.WuicBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <html>
     <head>
@@ -51,9 +51,9 @@
             <input type="checkbox" id="cache" name="cache"<%
                 try {
                     final ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                    final JAXBContext ctx = JAXBContext.newInstance(XmlWuicBean.class);
+                    final JAXBContext ctx = JAXBContext.newInstance(WuicBean.class);
                     final File file = new File(InitJavascriptFileListener.DIRECTORY_PATH, "wuic.xml");
-                    final XmlWuicBean bean = (XmlWuicBean) ctx.createUnmarshaller().unmarshal(file);
+                    final WuicBean bean = (WuicBean) ctx.createUnmarshaller().unmarshal(file);
                     final Boolean cache = Boolean.parseBoolean(bean.getEngineBuilders().get(0).getProperties().get(0).getValue());
                     out.print(cache ? " checked" : "");
                 } catch (Exception e) {

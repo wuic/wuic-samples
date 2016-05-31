@@ -1,0 +1,18 @@
+{
+    "nutDaoBuilders": [
+        {
+            "type": "ClasspathNutDaoBuilder",
+            "properties": {
+                "c.g.wuic.dao.basePath": "/img",
+                "c.g.wuic.dao.regex": "true",
+                "c.g.wuic.dao.contentBasedVersionNumber": "true"
+            }
+        }
+    ],
+    "heaps": [
+        {
+            "id": "img",
+            "nutPath": ".*.png"
+        }
+    ]
+}

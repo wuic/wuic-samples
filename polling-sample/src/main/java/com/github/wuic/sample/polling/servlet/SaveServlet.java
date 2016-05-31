@@ -38,9 +38,9 @@
 
 package com.github.wuic.sample.polling.servlet;
 
+import com.github.wuic.config.bean.PropertyBean;
+import com.github.wuic.config.bean.WuicBean;
 import com.github.wuic.util.IOUtils;
-import com.github.wuic.xml.XmlPropertyBean;
-import com.github.wuic.xml.XmlWuicBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -89,10 +89,10 @@ public class SaveServlet extends HttpServlet {
             // Save configuration
             file = new File(InitJavascriptFileListener.DIRECTORY_PATH, "wuic.xml");
             final Boolean cache = "on".equals(req.getParameter("cache"));
-            final JAXBContext context = JAXBContext.newInstance(XmlWuicBean.class);
-            final XmlWuicBean bean = (XmlWuicBean) context.createUnmarshaller().unmarshal(file);
-            final XmlPropertyBean prop = bean.getEngineBuilders().get(0).getProperties().remove(0);
-            bean.getEngineBuilders().get(0).getProperties().add(new XmlPropertyBean(prop.getKey(), cache.toString()));
+            final JAXBContext context = JAXBContext.newInstance(WuicBean.class);
+            final WuicBean bean = (WuicBean) context.createUnmarshaller().unmarshal(file);
+            final PropertyBean prop = bean.getEngineBuilders().get(0).getProperties().remove(0);
+            bean.getEngineBuilders().get(0).getProperties().add(new PropertyBean(prop.getKey(), cache.toString()));
             context.createMarshaller().marshal(bean, file);
         } catch (JAXBException je) {
             throw new ServletException(je);
