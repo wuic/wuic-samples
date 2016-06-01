@@ -39,7 +39,6 @@
 package com.github.wuic.spring;
 
 import com.github.wuic.WuicFacade;
-import com.github.wuic.WuicFacadeBuilder;
 import com.github.wuic.exception.WuicException;
 import com.github.wuic.thymeleaf.WuicDialect;
 import com.github.wuic.util.UrlProviderFactory;
@@ -90,6 +89,18 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
 
     /**
      * <p>
+     * Creates a new {@link WuicFacadeBuilderFactory}.
+     * </p>
+     *
+     * @return the factory
+     */
+    @Bean
+    public WuicFacadeBuilderFactory wuicFacadeBuilderFactory() {
+        return new WuicFacadeBuilderFactory();
+    }
+
+    /**
+     * <p>
      * Creates the facade that WUIC will use.
      * </p>
      *
@@ -98,9 +109,9 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
      */
     @Bean
     public WuicFacade wuicFacade() throws WuicException {
-        return new WuicFacadeBuilder()
+        return wuicFacadeBuilderFactory()
+                .create()
                 .contextPath(RESOURCES_CONTEXT_PATH)
-                .wuicConfigurationPath(getClass().getResource("/wuic.json"))
                 .build();
     }
 
