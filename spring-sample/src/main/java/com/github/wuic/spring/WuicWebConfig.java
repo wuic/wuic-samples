@@ -45,8 +45,8 @@ import com.github.wuic.util.UrlProviderFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -72,8 +72,8 @@ import java.util.Collections;
  * @author Guillaume DROUET
  */
 @Configuration
-@ComponentScan()
 @EnableWebMvc
+@PropertySource("classpath:application.properties")
 public class WuicWebConfig extends WebMvcConfigurerAdapter {
 
     /**
@@ -104,12 +104,13 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
      * Creates the facade that WUIC will use.
      * </p>
      *
+     * @param facadeBuilderFactory the factory
      * @return the facade
      * @throws WuicException if WUIC can't be initialize
      */
     @Bean
-    public WuicFacade wuicFacade() throws WuicException {
-        return wuicFacadeBuilderFactory()
+    public WuicFacade wuicFacade(final WuicFacadeBuilderFactory facadeBuilderFactory) throws WuicException {
+        return facadeBuilderFactory
                 .create()
                 .contextPath(RESOURCES_CONTEXT_PATH)
                 .build();
