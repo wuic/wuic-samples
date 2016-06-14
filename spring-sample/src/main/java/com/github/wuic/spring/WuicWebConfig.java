@@ -184,7 +184,7 @@ public class WuicWebConfig extends WebMvcConfigurerAdapter {
         final String resourceLocations = "classpath:/statics/";
 
         // Uncomment this line if you want to see 'resourceUrlProviderHelper' bean managing CSS without WUIC
-        // Also don't forget to comment the import in wuic.xml line and uncomment the import in index.html
+        // Also don't forget to comment the import in wuic.json line and uncomment the import in index.html
         //handleCss(registry, resourceLocations);
         handleLib(registry, resourceLocations);
     }
