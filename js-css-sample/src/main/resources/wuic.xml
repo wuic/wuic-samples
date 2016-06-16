@@ -45,13 +45,13 @@
         </engine-builder>
     </engine-builders>
     <heaps>
-        <heap id="filter-collapsible-js" dao-builder-id="httpResourceFactoryBuilder">
+        <heap id="filter-collapsible-js" dao-builder-id="wuicDefaultWebJarNutDaoBuilder">
             <nut-path>ui/jquery.ui.core.js</nut-path>
             <nut-path>ui/jquery.ui.widget.js</nut-path>
             <nut-path>ui/jquery.ui.accordion.js</nut-path>
         </heap>
-        <heap id="collapsible-js" dao-builder-id="httpResourceFactoryBuilder">
-            <nut-path>jquery-1.9.1.js</nut-path>
+        <heap id="collapsible-js" dao-builder-id="wuicDefaultWebJarNutDaoBuilder">
+            <nut-path>jquery.js</nut-path>
             <nut-path>ui/jquery.ui.core.js</nut-path>
             <nut-path>ui/jquery.ui.widget.js</nut-path>
             <nut-path>ui/jquery.ui.accordion.js</nut-path>

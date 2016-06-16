@@ -136,6 +136,24 @@
                 <artifactId>wuic-nodejs</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.wuic.extensions</groupId>
+                <artifactId>wuic-webjars</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery-ui</artifactId>
+                <version>${jquery-ui.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery</artifactId>
+                <version>${jquery.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -312,5 +330,7 @@
         <alpn-version>8.1.3.v20150130</alpn-version>
         <jetty8-version>8.1.9.v20130131</jetty8-version>
         <jetty9-version>9.3.0.RC0</jetty9-version>
+        <jquery-ui.version>1.10.2</jquery-ui.version>
+        <jquery.version>1.9.1</jquery.version>
     </properties>
 </project>
