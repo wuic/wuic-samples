@@ -60,6 +60,7 @@
                             <relocateTransformedXml>true</relocateTransformedXml>
                             <output>${project.build.finalName}</output>
                             <contextPath>${contextPath}</contextPath>
+                            <packageAsJar>false</packageAsJar>
                         </configuration>
                         <dependencies>
                             <dependency>
