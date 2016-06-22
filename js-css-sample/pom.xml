@@ -37,11 +37,6 @@
 
         <dependency>
             <groupId>com.github.wuic.extensions</groupId>
-            <artifactId>wuic-htmlcompressor</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.wuic.extensions</groupId>
             <artifactId>wuic-webjars</artifactId>
         </dependency>
 
