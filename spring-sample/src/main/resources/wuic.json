@@ -7,7 +7,7 @@
         }
     }],
     "engineBuilders":  [{
-        "type": "YuiCompressorJavascriptEngineBuilder",
+        "type": "yuiCompressorJavascript",
         "properties": {
             // Won't break AngularJS dependency resolution
             "c.g.wuic.engine.obfuscate" : "false"
