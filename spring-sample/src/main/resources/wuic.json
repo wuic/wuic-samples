@@ -1,8 +1,8 @@
 {
     "nutDaoBuilders": [{
-        "type": "ClasspathNutDaoBuilder",
+        "type": "spring",
         "properties": {
-            "c.g.wuic.dao.basePath" : "/statics/",
+            "c.g.wuic.dao.basePath" : "classpath:statics",
             "c.g.wuic.dao.contentBasedVersionNumber" : "true"
         }
     }],
@@ -16,7 +16,7 @@
     "heaps": [{
         "id": "app",
         "nutPath": [
-            "js/controllers.js",
+            "js/*.js",
             // Comment this line if you want to see 'resourceUrlProviderHelper' bean managing CSS without WUIC
             // Also don't forget to uncomment the import in index.html line and the handleCss() call in WuicWebConfig
             "css/app.css"

@@ -73,7 +73,6 @@ import java.util.Collections;
  */
 @Configuration
 @EnableWebMvc
-@PropertySource("classpath:application.properties")
 public class WuicWebConfig extends WebMvcConfigurerAdapter {
 
     /**
