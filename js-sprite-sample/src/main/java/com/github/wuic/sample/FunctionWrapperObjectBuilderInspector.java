@@ -76,14 +76,16 @@ public class FunctionWrapperObjectBuilderInspector implements ObjectBuilderInspe
      * {@inheritDoc}
      */
     @Override
-    public void transform(InputStream is, OutputStream os, ConvertibleNut convertible) throws IOException {
+    public boolean transform(InputStream is, OutputStream os, ConvertibleNut convertible) throws IOException {
         if (convertible.getNutType().equals(NutType.JAVASCRIPT)) {
             os.write("(function(){".getBytes());
             IOUtils.copyStream(is, os);
             os.write("})();".getBytes());
-        } else {
-            IOUtils.copyStream(is, os);
+
+            return true;
         }
+
+        return false;
     }
 
     /**
