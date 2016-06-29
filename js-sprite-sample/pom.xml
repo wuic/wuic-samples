@@ -32,7 +32,7 @@
 
         <dependency>
             <groupId>com.github.wuic.extensions</groupId>
-            <artifactId>wuic-yuicompressor</artifactId>
+            <artifactId>wuic-google-closure</artifactId>
         </dependency>
     </dependencies>
 

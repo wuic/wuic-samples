@@ -22,7 +22,7 @@
                 <property key="c.g.wuic.engine.spriteProviderClassName">javascript</property>
             </properties>
         </engine-builder>
-        <engine-builder type="YuiCompressorJavascriptEngineBuilder">
+        <engine-builder type="closure">
             <properties>
                 <property key="c.g.wuic.engine.compress">true</property>
             </properties>

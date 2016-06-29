@@ -84,7 +84,7 @@ All samples apply optimizations provided by core module:
             It demonstrates how to include a set of images aggregated and loaded with sprite in Javascript. The demo
             just displays the different images using sprites.
         </td>
-        <td>YuiCompressor Javascript & CSS minification</td>
+        <td>Google Closure compiler (requires Java 7+) & CSS minification</td>
     </tr>
     <tr>
         <td>HTML filter</td>
