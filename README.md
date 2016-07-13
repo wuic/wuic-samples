@@ -17,7 +17,13 @@ Alternatively, you can run:
 
 Jetty 8 starts and listen port 8080 with the HTTP/1.1 connector. JDK 6 is required.
 
-Some samples are currently available on the 'SNAPSHOT' branche. However, you can use them until they will be released.
+You can also deploy the sample with `Undertow` thanks to the `wildfly-swarm` maven plugin:
+
+```
+  mvn -Pwildfly-swarm wildfly-swarm:run
+```
+
+Some samples are currently available on the 'SNAPSHOT' branch. However, you can use them until they will be released.
 All samples apply optimizations provided by core module:
 - Aggregation
 - Client-side caching
