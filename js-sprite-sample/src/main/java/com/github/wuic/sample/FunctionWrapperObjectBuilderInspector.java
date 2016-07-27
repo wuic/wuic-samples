@@ -38,17 +38,18 @@
 
 package com.github.wuic.sample;
 
-import com.github.wuic.NutType;
+import com.github.wuic.EnumNutType;
 import com.github.wuic.config.ObjectBuilderInspector;
 import com.github.wuic.engine.EngineType;
 import com.github.wuic.engine.core.TextAggregatorEngine;
 import com.github.wuic.nut.ConvertibleNut;
 import com.github.wuic.util.IOUtils;
+import com.github.wuic.util.Input;
+import com.github.wuic.util.Output;
 import com.github.wuic.util.Pipe;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.Writer;
 
 /**
  * <p>
@@ -76,11 +77,12 @@ public class FunctionWrapperObjectBuilderInspector implements ObjectBuilderInspe
      * {@inheritDoc}
      */
     @Override
-    public boolean transform(InputStream is, OutputStream os, ConvertibleNut convertible) throws IOException {
-        if (convertible.getNutType().equals(NutType.JAVASCRIPT)) {
-            os.write("(function(){".getBytes());
-            IOUtils.copyStream(is, os);
-            os.write("})();".getBytes());
+    public boolean transform(final Input is, final Output output, final ConvertibleNut convertible) throws IOException {
+        if (convertible.getNutType().equals(EnumNutType.JAVASCRIPT)) {
+            final Writer os = output.writer();
+            os.write("(function(){");
+            IOUtils.copyStream(is.reader(), os);
+            os.write("})();");
 
             return true;
         }
