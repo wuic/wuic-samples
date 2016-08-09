@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>com.github.wuic.extensions</groupId>
-            <artifactId>wuic-ehcache</artifactId>
+            <artifactId>wuic-hazelcast</artifactId>
         </dependency>
 
         <dependency>

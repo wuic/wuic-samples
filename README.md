@@ -78,7 +78,7 @@ All samples apply optimizations provided by core module:
         <td>JSP Tag</td>
     </tr>
     <tr>
-        <td>Server-side caching with EhCache</td>
+        <td>Server-side caching with Hazelcast</td>
     </tr>
     </tr>
          <td>HTML compressor support</td>
