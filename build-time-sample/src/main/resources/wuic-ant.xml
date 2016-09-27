@@ -2,14 +2,14 @@
 
 <wuic>
     <heaps>
-        <heap id="js" dao-builder-id="wuicDefaultDiskNutDaoBuilder">
+        <heap id="js" dao-builder-id="disk">
             <nut-path>public/javascripts/.*.js</nut-path>
             <nut-path>dist/.*.js</nut-path>
         </heap>
-        <heap id="css" dao-builder-id="wuicDefaultDiskNutDaoBuilder">
+        <heap id="css" dao-builder-id="disk">
             <nut-path>.*.css</nut-path>
         </heap>
-        <heap id="html" dao-builder-id="wuicDefaultDiskNutDaoBuilder">
+        <heap id="html" dao-builder-id="disk">
             <nut-path>.*.html</nut-path>
         </heap>
     </heaps>
